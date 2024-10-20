@@ -1,0 +1,5 @@
+flake8
+mypy
+requests
+python-dotenv
+pytest
