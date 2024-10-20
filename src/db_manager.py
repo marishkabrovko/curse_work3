@@ -46,13 +46,21 @@ class DBManager:
 
         for vac in vacs_data:
             if vac[2] == 0.0 and vac[3] == 0.0:
-                result.append(f"-={vac[0]}=-, вакансия: {vac[1]}\nЗарплата: не указана. Ссылка: {vac[4]}\n")
+                result.append(
+                    f"-={vac[0]}=-, вакансия: {vac[1]}\nЗарплата: не указана. Ссылка: {vac[4]}\n"
+                )
             elif vac[3] == 0.0:
-                result.append(f"-={vac[0]}=-, вакансия: {vac[1]}\nЗарплата: от {vac[2]}. Ссылка: {vac[4]}\n")
+                result.append(
+                    f"-={vac[0]}=-, вакансия: {vac[1]}\nЗарплата: от {vac[2]}. Ссылка: {vac[4]}\n"
+                )
             elif vac[2] == 0.0:
-                result.append(f"-={vac[0]}=-, вакансия: {vac[1]}\nЗарплата: до {vac[3]}. Ссылка: {vac[4]}\n")
+                result.append(
+                    f"-={vac[0]}=-, вакансия: {vac[1]}\nЗарплата: до {vac[3]}. Ссылка: {vac[4]}\n"
+                )
             else:
-                result.append(f"-={vac[0]}=-, вакансия: {vac[1]}\nЗарплата: {vac[2]} - {vac[3]}. Ссылка: {vac[4]}\n")
+                result.append(
+                    f"-={vac[0]}=-, вакансия: {vac[1]}\nЗарплата: {vac[2]} - {vac[3]}. Ссылка: {vac[4]}\n"
+                )
 
         return result
 
@@ -94,7 +102,9 @@ class DBManager:
             elif vac[2] == 0.0:
                 result.append(f"• {vac[0]}\nЗарплата: от {vac[1]}. Ссылка: {vac[3]}\n")
             else:
-                result.append(f"• {vac[0]}\nЗарплата: {vac[1]} - {vac[2]}. Ссылка: {vac[3]}\n")
+                result.append(
+                    f"• {vac[0]}\nЗарплата: {vac[1]} - {vac[2]}. Ссылка: {vac[3]}\n"
+                )
 
         return result
 
@@ -120,6 +130,8 @@ class DBManager:
             elif vac[1] == 0:
                 result.append(f"• {vac[0]}\nЗарплата: до {vac[2]}. Ссылка: {vac[3]}\n")
             else:
-                result.append(f"• {vac[0]}\nЗарплата: {vac[1]} - {vac[2]}. Ссылка: {vac[3]}\n")
+                result.append(
+                    f"• {vac[0]}\nЗарплата: {vac[1]} - {vac[2]}. Ссылка: {vac[3]}\n"
+                )
 
         return result

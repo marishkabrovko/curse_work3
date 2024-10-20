@@ -4,7 +4,10 @@ import psycopg2
 
 
 def enter_data_into_tables(
-    db_name: str, params: dict[str, Any], employers_data: dict[str, Any], vacancies_data: list[dict[str, Any]]
+    db_name: str,
+    params: dict[str, Any],
+    employers_data: dict[str, Any],
+    vacancies_data: list[dict[str, Any]],
 ) -> None:
     """Заполнение таблиц данными о работадателях и вакансиях"""
 

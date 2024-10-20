@@ -24,7 +24,9 @@ class HeadHunterAPI(Parser):
 
     def __api_connect(self) -> requests.Response:
         """Подключение к API hh.ru"""
-        response = requests.get(self.__url, headers=self.__headers, params=self.__params)
+        response = requests.get(
+            self.__url, headers=self.__headers, params=self.__params
+        )
         if response.status_code == 200:
             return response
 
